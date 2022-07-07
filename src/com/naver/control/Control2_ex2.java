@@ -28,9 +28,12 @@ public class Control2_ex2 {
 		 * 
 		 * System.out.println(c);
 		 */
-		//ch = (char) (ch + num);
-		
-		System.out.println(ch+1);
+		ch = (char) (ch + num);
+		if(ch == 123) {
+			ch = 97;
+			ch = (char)ch;
+		}		
+		System.out.println(ch);
 	}
-
+	//Study Edition
 }
