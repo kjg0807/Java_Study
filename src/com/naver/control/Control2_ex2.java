@@ -8,39 +8,41 @@ public class Control2_ex2 {
 		// 알파벳 순서: a b c d e f g h i j k l m n o p q r s t u v w x y z
 		// 설정한 알파벳에서 설정한 숫자만큼 뒤의 알파벳을 사용
 		// char ch = 'a'; 2기준 a => c
+
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("1~5 사이의 숫자 입력");
-		int num = sc.nextInt();
-		// num = 1 -> ch = c
-		// num = 2 -> ch = d
-		System.out.println("알파벳 입력");
-		char ch = sc.next().charAt(0);
-		// charAt(0) - str이 가리키고 있는 문자열에서 0번째에 있는 문자를 char타입으로 변환한다
-		/*
-		 * String str = new String();
-		 * 
-		 * char c = ' ';
-		 * 
-		 * str = "안녕하세요";
-		 * 
-		 * c = str.charAt(0);
-		 * 
-		 * System.out.println(c);
-		 */
+		while (true) {
+			System.out.println("1~5 사이의 숫자 입력");
+			int num = sc.nextInt();
+			// num = 1 -> ch = c
+			// num = 2 -> ch = d
+			System.out.println("알파벳 입력");
+			char ch = sc.next().charAt(0);
 
-		ch = (char) (ch + num);
-		if(ch == 123) {
-			ch = 97;
-			ch = (char)ch;
-		}		
-		System.out.println(ch);
+			int rs = ch + num;
 
-		//ch = (char) (ch + num);
-		
-		System.out.println(ch+1);
-		
-		//Home Edition +++++++++
+			// 소문자 z를 넘어갔을 때 소문자 a로 넘어가게 하는 코드
+			if (rs > 'z') { // 아스키코드 - 122 = z
+				rs = rs - 'z'; // if rs = 2 z -> b
+				rs = 'a' + rs - 1; // 아스키코드 96 -> a 이전 (a: 97)
+			}
+			// 대문자 z를 넘어갔을 때 대문자 a로 넘어가게 하는 코드
+			if (rs > 'Z' && rs < 'a') {
+				rs = rs - 'Z';
+				rs = 'A' + rs - 1;
+			}
+			ch = (char) rs;
+
+			System.out.println("ch: " + ch);
+			
+			System.out.println("!를 입력하면 프로그램 종료 (실행하려면 아무키나 입력)");
+			String z = sc.next();
+			if(z.equals('!')) {
+				System.out.println("프로그램 종료");
+				break;
+			}
+		}
+		// Home Edition +++++++++
+		// Study Edition
 	}
-	//Study Edition
 }
