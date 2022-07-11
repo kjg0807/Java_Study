@@ -31,8 +31,8 @@ public class Loop5_ex2
 			int aa = sc.nextInt();
 			int com = random.nextInt(3);
 			System.out.println("You: " + aa + " vs com: " + com);
-			
-			if (com == 0 && aa == 2)  // 0-2(가위>보) -> com win
+
+			if (com == 0 && aa == 2) // 0-2(가위>보) -> com win
 			{
 				aa = -1;
 			}

@@ -43,7 +43,7 @@ public class Loop4_ex1
 		// }
 		// }
 		// }
-		
+
 		// ------------강사님 코드------------
 		System.out.println("분 입력");
 		int m = sc.nextInt();
