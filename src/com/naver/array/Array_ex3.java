@@ -97,8 +97,7 @@ public class Array_ex3
 					if (sel == number[i])
 					{
 						System.out.println("Name\tNumber\tKor\tEng\tMath\tTotal\tAvg");
-						System.out.println(
-								name[i] + "\t" + number[i] + "\t" + kor[i] + "\t" + eng[i] + "\t" + math[i] + "\t" + total[i] + "\t" + avg[i]);
+						System.out.println(name[i] + "\t" + number[i] + "\t" + kor[i] + "\t" + eng[i] + "\t" + math[i] + "\t" + total[i] + "\t" + avg[i]);
 						System.out.println("입력한 번호의 정보 출력");
 						System.out.println("");
 						flag = !flag;
@@ -146,7 +145,7 @@ public class Array_ex3
 					{
 						if (j == 1)
 						{
-							index--;
+							//index--;
 							continue;
 						}
 						nameCopy[index] = name[j];
